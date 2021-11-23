@@ -65,10 +65,11 @@ interface AuthorizationCodeInterface
      * @param string $redirect_uri - Redirect URI(s) to be stored in a space-separated string.
      * @param int    $expires      - Expiration to be stored as a Unix timestamp.
      * @param string $scope        - OPTIONAL Scopes to be stored in space-separated string.
+     * @param string $id_token     - OPTIONAL id token
      *
      * @ingroup oauth2_section_4
      */
-    public function setAuthorizationCode($code, $client_id, $user_id, $redirect_uri, $expires, $scope = null);
+    public function setAuthorizationCode($code, $client_id, $user_id, $redirect_uri, $expires, $scope = null, $id_token = null);
 
     /**
      * once an Authorization Code is used, it must be expired
